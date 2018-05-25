@@ -1,0 +1,53 @@
+<html>
+
+<head>
+<title>Final Project</title>
+
+<style>
+	table {
+    	font-family: arial, sans-serif;
+    	border-collapse: collapse;
+    	width: 100%;
+	}
+
+	td, th {
+    	border: 1px solid #dddddd;
+    	text-align: left;
+    	padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+    </style>
+</head>
+
+<body>
+	<h2>Kegs Table</h2><br>
+	<table>
+		<tr>
+		<th><center>ID</center></th>
+		<th><center>Keg_Id</center></th>
+		<th><center>Keg_Flow</center></th>
+		</tr>
+		<tr>			<ul>
+			<p>		  <th><center><li><a href="/update_keg/{{keg['keg'].id}}">Update Keg</a></li></center></th>
+					</ul>
+		    			<td><center>{{keg['keg'].keg_id}}</center></td>
+		    			<td><center>{{keg['keg'].keg_flow}}</center></td>
+			</p>
+		</tr>
+	 </table>
+	 <table>
+		<tr>
+			<ul>
+	     		  <th><center><li><a href="/delete_keg/{{keg['keg'].id}}">Delete Keg</a></li></center></th>
+			  <th><center><li><a href="/">Come back to index</a></li></center></th>
+	      		  <th><center><li><a href="/show_kegs">Come back to kegs</a></li></center></th>
+	     		</ul>
+		</tr>	
+	</table>	
+
+</body>
+
+</html>

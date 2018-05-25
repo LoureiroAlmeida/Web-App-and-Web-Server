@@ -1,0 +1,56 @@
+<html>
+
+<head>
+<title>Final Project</title>
+
+<style>
+	table {
+    	font-family: arial, sans-serif;
+    	border-collapse: collapse;
+    	width: 100%;
+	}
+
+	td, th {
+    	border: 1px solid #dddddd;
+    	text-align: left;
+    	padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+    </style>
+</head>
+
+<body>
+	<h2>Kegs Table</h2><br>
+	<table>
+		<tr>
+		<th><center>ID</center></th>
+		<th><center>Keg_Id</center></th>
+		<th><center>Keg_Flow</center></th>
+		</tr>
+	  	{% for row in kegs['kegs'] %}
+			<tr>
+				<p>
+					<ul>
+					  <td><center><a href="/update_keg/{{row.id}}">{{row.id}}</a></center></td>
+					<ul>
+		    			<td><center>{{row.keg_id}}</center></td>
+		    			<td><center>{{row.keg_flow}}</center></td>
+				</p>
+			</tr>
+	  	{% endfor %}
+	 </table>
+	 <table>
+		<tr>
+			<ul>
+			  <th><center><li><a href="/insert_keg">Insert Keg</a></li></th></center>
+			  <th><center><li><a href="/">Come back to index</a></li></center></th>
+	     		</ul>
+		</tr>	
+	</table>
+
+</body>
+
+</html>

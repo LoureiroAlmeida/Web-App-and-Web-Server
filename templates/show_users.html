@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<title>Final Project</title>
+
+<style>
+	table {
+    	font-family: arial, sans-serif;
+    	border-collapse: collapse;
+    	width: 100%;
+	}
+
+	td, th {
+    	border: 1px solid #dddddd;
+    	text-align: left;
+    	padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+    </style>
+</head>
+
+<body>
+	<h2>Users Table</h2><br>
+	<table>
+		<tr>
+		<th><center>ID</center></th>
+		<th><center>Username</center></th>
+		<th><center>Fullname</center></th>
+		<th><center>Email</center></th>
+		<th><center>Password</center></th>
+		<th><center>Nfc_Id</center></th>
+		<th><center>User_Flow</center></th>
+		</tr>
+	  	{% for row in users['users'] %}
+			<tr>
+				<p>
+					<ul>
+					  <td><center><a href="/update_user/{{row.id}}">{{row.id}}</a></center></td>
+					<ul>
+		    			<td><center>{{row.username}}</center></td>
+					<td><center>{{row.fullname}}</center></td>
+					<td><center>{{row.email}}</center></td>
+					<td><center>{{row.password}}</center></td>
+					<td><center>{{row.nfc_id}}</center></td>
+					<td><center>{{row.user_flow}}</center></td>
+				</p>
+			</tr>
+	  	{% endfor %}
+	 </table>
+	 <table>
+		<tr>
+			<ul>
+			  <th><center><li><a href="/insert_user">Insert User</a></li></th></center>
+			  <th><center><li><a href="/">Come back to index</a></li></center></th>
+	     		</ul>
+		</tr>	
+	</table>	
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+<title>Final Project</title>
+<h2>Update Kegs</h2>
+
+<style>
+	table {
+    	font-family: arial, sans-serif;
+    	border-collapse: collapse;
+    	width: 100%;
+	}
+
+	td, th {
+    	border: 1px solid #dddddd;
+    	text-align: left;
+    	padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+    </style>
+</head>
+<body>
+	<form method="POST">
+		Keg_id: <input type="text" name="keg_id" value={{keg['keg'].keg_id}}><br>
+		Keg_flow: <input type="text" name="keg_flow" value={{keg['keg'].keg_flow}}><br>
+		<input type="submit" value="Submit"><br>
+	</form>
+
+	<table>
+		<tr>
+			<ul>
+			  <th><center><li><a href="/delete_keg/{{keg['keg'].id}}">Delete Keg</a></li></center></th>
+			  <th><center><li><a href="/">Come back to index</a></li></center></th>
+	      		  <th><center><li><a href="/show_kegs">Come back to kegs</a></li></center></th>
+	     		</ul>
+		</tr>	
+	</table>
+	  
+</body>

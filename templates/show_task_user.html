@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<title>Final Project</title>
+
+<style>
+	table {
+    	font-family: arial, sans-serif;
+    	border-collapse: collapse;
+    	width: 100%;
+	}
+
+	td, th {
+    	border: 1px solid #dddddd;
+    	text-align: left;
+    	padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+    </style>
+</head>
+
+<body>
+	<h2>Users Table</h2><br>
+	<table>
+		<tr>
+		<th><center>ID</center></th>
+		<th><center>Username</center></th>
+		<th><center>Fullname</center></th>
+		<th><center>Email</center></th>
+		<th><center>Password</center></th>
+		<th><center>Nfc_Id</center></th>
+		<th><center>User_Flow</center></th>
+		</tr>
+		<tr>
+			<p>
+				<ul>
+				  <td><center><a href="/update_user/{{user['user'].id}}">{{user['user'].id}}</a></center></td>
+				</ul>
+		    		<td><center>{{user['user'].username}}</center></td>
+		    		<td><center>{{user['user'].fullname}}</center></td>
+				<td><center>{{user['user'].email}}</center></td>
+				<td><center>{{user['user'].password}}</center></td>
+				<td><center>{{user['user'].nfc_id}}</center></td>
+				<td><center>{{user['user'].user_flow}}</center></td>
+			</p>
+		</tr>
+	 </table>
+	<table>
+		<tr>
+			<ul>
+	     		  <th><center><li><a href="/delete_user/{{user['user'].id}}">Delete User</a></li></center></th>
+			  <th><center><li><a href="/">Come back to index</a></li></center></th>
+	      		  <th><center><li><a href="/show_users">Come back to users</a></li></center></th>
+	     		</ul>
+		</tr>	
+	</table>
+</body>
+
+</html>
